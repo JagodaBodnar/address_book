@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<main class="address-container">
+    <div class="search_container">
+        <label for="searchName">Enter last name: </label>
+        <input type="text" id="searchName" name="searchName" />
+        <button class="button_search" id="button_search_by_name" onclick="searchByName()">Search</button>
+    </div>
+    <div class="search_container">
+        <label for="searchStreet">Enter street name: </label>
+        <input type="text" id="searchStreet" name="searchStreet" />
+        <button class="button_search" id="button_search_by_street" onclick="searchByStreet()">Search</button>
+    </div>
+    <button class="button_reset" id="button_reset" onclick="reset()">Reset filter</button>
+    <form class="address_form_edit" onsubmit="updateEntry(event)">
+        <label for="fname_edit">First name:</label>
+        <input type="text" id="fname_edit" name="fname_edit">
+        <label for="lname_edit">Last name:</label>
+        <input type="text" id="lname_edit" name="lname_edit">
+        <label for="street_edit">Street:</label>
+        <input type="text" id="street_edit" name="street_edit">
+        <label for="city_edit">City:</label>
+        <input type="text" id="city_edit" name="city_edit">
+        <label for="pcode_edit">Post code:</label>
+        <input type="text" id="pcode_edit" name="pcode_edit">
+        <button type="submit" class="button_submit">Update</button>
+    </form>
+    <div class="addresses_wrapper" id="addresses_wrapper"></div>
+    <button class="button_add" onclick="showForm()">Create new entry</button>
+    <form class="address_form" onsubmit="createNewEntry(event)">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname">
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname">
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <label for="pcode">Post code:</label>
+        <input type="text" id="pcode" name="pcode">
+        <button type="submit" class="button_submit">Add</button>
+    </form>
+    <div class="error">No results found.</div>
+</main>
+<script src="index.js"></script>
+</body>
+
+</html>

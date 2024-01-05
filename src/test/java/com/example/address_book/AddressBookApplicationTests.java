@@ -1,6 +1,6 @@
 package com.example.address_book;
 
-import model.AddressesBook;
+import com.example.address_book.model.AddressBook;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +14,7 @@ class AddressBookApplicationTests {
 
     @Test
     void create_new_address() {
-        AddressesBook address = new AddressesBook();
+        AddressBook address = new AddressBook();
         address.setId(UUID.randomUUID().toString());
         address.setCity("London");
         address.setName("John");
@@ -27,7 +27,6 @@ class AddressBookApplicationTests {
         assertEquals("Doe",address.getSurname());
         assertEquals("Baker Street",address.getStreet());
         assertEquals("12345",address.getPostCode());
-
     }
 
 }

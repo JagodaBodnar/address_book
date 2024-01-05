@@ -1,5 +1,4 @@
 package com.example.address_book.controller;
-
 import com.example.address_book.exception.AddressesBookNotFoundException;
 import com.example.address_book.model.AddressBook;
 import com.example.address_book.repository.AddressBookRepository;
@@ -8,8 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-
+@CrossOrigin
 @RestController
 @RequestMapping("/addresses")
 public class AddressBookController {
@@ -31,13 +29,13 @@ public class AddressBookController {
     }
 
     @GetMapping("/street/{street}")
-    public AddressBook findByStreetName(@PathVariable String street) throws AddressesBookNotFoundException {
+    public List<AddressBook> findByStreetName(@PathVariable String street) throws AddressesBookNotFoundException {
         return repository.findByStreetName(street);
     }
 
-    @GetMapping("/name/{name}")
-    public AddressBook findByName(@PathVariable String name) throws AddressesBookNotFoundException {
-        return repository.findByName(name);
+    @GetMapping("/name/{surname}")
+    public List<AddressBook> findByName(@PathVariable String surname) throws AddressesBookNotFoundException {
+        return repository.findByLastName(surname);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

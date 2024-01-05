@@ -1,0 +1,145 @@
+body{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+.address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.address_entry {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #164863;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    background-color: #164863;
+}
+
+.address_form, .address_form_edit {
+    flex-direction: column;
+    display: none;
+    margin: 15px;
+}
+
+.button_delete,
+.button_add,
+.button_submit,
+.button_search,
+.button_edit,
+.button_reset {
+    background-color: #ea4c89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 80px;
+    height: auto;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    align-self: flex-end;
+}
+
+.button_delete:hover,
+.button_delete:focus {
+    background-color: #f082ac;
+}
+
+.button_add {
+    background-color: #2c974b;
+    align-self: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.button_add:hover,
+.button_add:focus {
+    background-color: #4ebc5e;
+}
+
+.button_submit {
+    background-color: #2b76c6;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.button_submit:hover,
+.button_submit:focus {
+    background-color: #61a9f1;
+}
+
+label{
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+}
+
+input{
+    padding: 5px;
+    border: 1px solid rgb(144, 142, 142);
+    border-radius: 5px;
+    outline: none;
+}
+
+.button_search{
+    background-color: #7a7c7b;
+    align-self: center;
+    padding: 5px;
+    height: auto;
+}
+
+.search_container{
+    margin: 5px;
+}
+
+.button_edit{
+    background-color: #4d9dde;
+    margin-bottom: 5px;
+}
+
+.button_edit:hover,
+.button_edit:focus {
+    background-color: #9ec3f3;
+}
+
+
+.button_reset:hover,
+.button_reset:hover {
+    background-color: #6d97e1;
+}
+
+.button_reset{
+    background-color: #371b9a;
+    align-self: center;
+}
+.error{
+    display: none;
+    margin: 10px;
+}
+
+.show {
+    display: flex;
+}
+
+.hide{
+    display: none;
+}

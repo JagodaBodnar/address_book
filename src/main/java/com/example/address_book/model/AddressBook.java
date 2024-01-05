@@ -1,4 +1,4 @@
-package model;
+package com.example.address_book.model;
 
 
 import jakarta.validation.constraints.NotEmpty;
