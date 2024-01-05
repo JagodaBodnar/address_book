@@ -29,6 +29,5 @@ address_book -> src -> main -> java -> AddressBookApplication
 
 3. open index.html included inside frontend folder
 
-### Visualisation
 
 
