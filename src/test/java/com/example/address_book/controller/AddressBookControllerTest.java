@@ -30,6 +30,21 @@ public class AddressBookControllerTest {
         assertEquals(2,entity.getBody().size());
 
     }
+
+    @Test
+    @Order(2)
+    void findById() {
+        AddressBook existing = findAllAddresses().getBody().get(1);
+        String id = existing.getId();
+        String street = "6th Avenue";
+        String city = "New York";
+        String postCode = "10002";
+        AddressBook address =  restTemplate.getForObject("/addresses/" + id, AddressBook.class);
+        assertEquals(id, address.getId());
+        assertEquals(street, address.getStreet());
+        assertEquals(city, address.getCity());
+        assertEquals(postCode, address.getPostCode());
+    }
     private ResponseEntity<List<AddressBook>> findAllAddresses() {
         return restTemplate.exchange("/addresses",
                 HttpMethod.GET,
